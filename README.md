@@ -46,21 +46,19 @@ BECAUSE ASSESSMENT FOR CHILDREN'S ABILITIES SHOULD BE BASED ON ACADEMIC ACHIVEME
 
 I. Download the latest version of this software (JAR file) from [the download page in Bitbucket](https://bitbucket.org/JimmyKenMerchant21/supermathtestforkids_alpha/downloads). Latest Java Runtime Environment(JRE) is needed to play this game.
 
-↑Sorry for it!! Not Yet JAR Files
+↑ Sorry for it! current JAR file is old version which has no restart button!
 
 II. Start this software, and enter your nickname. Then click "Get Tested" button.
 
-![mtcp1.PNG](https://bitbucket.org/repo/9XXnjp/images/840217282-mtcp1.PNG)
+![mtcp1.PNG](https://bitbucket.org/repo/MA4E8y/images/3639820123-mtcp1.PNG)
 
 III. Select one of test types, and start quizzes by clicking each button. You can change quizzes' difficulties by clicking "Level Settings" button.
 
 IV. Answer 10 quizzes by enter numbers using your ten key pad, and click "Answer" button. Also you can pass quizzes by clicking "Pass" button. If you miss the answer, you can see the correct answer by clicking "Why?" button.
 
-![mtcp2.PNG](https://bitbucket.org/repo/9XXnjp/images/768894793-mtcp2.PNG)
+![mtcp2.PNG](https://bitbucket.org/repo/MA4E8y/images/2423468839-mtcp2.PNG)
 
 V. To next question, click "Next" button. To show the result, click "End" button on the 10th quiz after answering.
-
-![mtcp3.PNG](https://bitbucket.org/repo/9XXnjp/images/251354749-mtcp3.PNG)
 
 CAUTION: USER SHOULD USE THIS SOFTWARE IN A SUITABLE MANNER AS AN APPROPRIATE COMPUTER OPERATOR.
 THIS SOFTWARE HAS NO WARRANTY FOR ANY DAMEGE OF USER, AND ANY DAMAGE OF PROPERTY WHICH USER USES.
