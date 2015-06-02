@@ -44,9 +44,9 @@ BECAUSE ASSESSMENT FOR CHILDREN'S ABILITIES SHOULD BE BASED ON ACADEMIC ACHIVEME
 
 ###b. Tutorial
 
-I. Download the latest version of this software (JAR file) from [the download page in Bitbucket](https://bitbucket.org/JimmyKenMerchant21/supermathtestforkids_alpha/downloads). Latest Java Runtime Environment(JRE) is needed to play this game.
-
 ##Sorry for it! current JAR file is old version which has no restart button!
+
+I. Download the latest version of this software (JAR file) from [the download page in Bitbucket](https://bitbucket.org/JimmyKenMerchant21/supermathtestforkids_alpha/downloads). Latest Java Runtime Environment(JRE) is needed to play this game.
 
 II. Start this software, and enter your nickname. Then click "Get Tested" button.
 
