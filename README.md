@@ -44,8 +44,6 @@ BECAUSE ASSESSMENT FOR CHILDREN'S ABILITIES SHOULD BE BASED ON ACADEMIC ACHIVEME
 
 ###b. Tutorial
 
-##Sorry for it! current JAR file is old version which has no restart button!
-
 I. Download the latest version of this software (JAR file) from [the download page in Bitbucket](https://bitbucket.org/JimmyKenMerchant21/supermathtestforkids_alpha/downloads). Latest Java Runtime Environment(JRE) is needed to play this game.
 
 II. Start this software, and enter your nickname. Then click "Get Tested" button.
@@ -113,9 +111,11 @@ User and Developer can not use this software without complying all ariticles of 
 
 ##12: HISTORY
 
+06/03/2015 -- Tagged Version1.1 as of the date, which is added Restart button and improved an issue about RAM.
+
 06/02/2015 -- Re-release this software on Bitbucket and Re-tagged Version1.0 as of the date
 
-05/25/2015 -- First tagged Version 1.0 as of the date
+05/25/2015 -- First tagged Version1.0 as of the date
 
 05/24/2015 -- Re-release this software on Bitbucket
 

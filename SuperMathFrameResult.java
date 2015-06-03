@@ -137,7 +137,7 @@ class SuperMathFrameResult extends javax.swing.JFrame {
     // For auto button
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         if(show){
-            String testtype= null;
+            String testtype = null;
             if(SuperMathTest.rand){
                 testtype = "Mix Tests";
             }else{
@@ -212,8 +212,8 @@ class SuperMathFrameResult extends javax.swing.JFrame {
             jLabel4.setForeground(black);             
             this.setVisible(false);
             show = true;
+            SuperMathTest.restar++;            
             SuperMathTest.restart();
-            SuperMathTest.restar++;
         }else{
             SuperMathTest.popup.setVisible(true);
             SuperMathTest.popup.jLabel1.setText("Please End Once");

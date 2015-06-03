@@ -14,9 +14,8 @@ class SuperMathCheckRem {
     private String panswer = null;
     private String pcoanswerre = null;
     private String panswerre = null; 
-    private BigDecimal coan = new BigDecimal(0);
-    private BigDecimal an = new BigDecimal(0);
-    
+    private BigDecimal coan;
+    private BigDecimal an;
     
     SuperMathCheckRem(String pcoanswer, String pcoanswerre, String panswer, String panswerre) {
        this.pcoanswer = pcoanswer;

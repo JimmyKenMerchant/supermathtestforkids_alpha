@@ -12,10 +12,9 @@ class SuperMathCheck {
     
     private String coanswer = null;
     private String answer = null;
-    private BigDecimal coan = new BigDecimal(0);
-    private BigDecimal an = new BigDecimal(0);
-    
-    
+    private BigDecimal coan;
+    private BigDecimal an;
+       
     SuperMathCheck(String coanswer, String answer) {
        this.coanswer = coanswer;
        this.answer = answer;     

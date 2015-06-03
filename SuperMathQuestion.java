@@ -61,6 +61,11 @@ class SuperMathQuestion extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 255, 0));
@@ -200,19 +205,8 @@ class SuperMathQuestion extends javax.swing.JFrame {
             if(chek){
                 boolean ch = true;
                 boolean err = true;
-                try{
-                    answer = jTextField1.getText();
-                }catch(NullPointerException e){
-                    jTextField1.setText(null);
-                    SuperMathTest.popup.setVisible(true);
-                    SuperMathTest.popup.jLabel1.setText("Error!");
-                    answer = "?";
-                    err = false;
-                    SuperMathTest.erco++;
-                    if(SuperMathTest.erco > 19){
-                        System.exit(0);
-                    }                    
-                }
+                
+                answer = jTextField1.getText();
                 
                 // check whether this answer is too long or not
                 int a = answer.length();
@@ -303,6 +297,23 @@ class SuperMathQuestion extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    // Delete exceeded characters in the field
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        final int limit = 30;
+        if(SuperMathTest.tp < 500){
+            javax.swing.JTextField a = (javax.swing.JTextField)evt.getSource();
+            String ent = a.getText();
+            if(ent.length() >= limit){
+               ent = ent.substring(0, limit);
+            jTextField1.setText(ent);        
+            }
+            SuperMathTest.tp++;
+        }else{
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jTextField1KeyTyped
+
+    // Renew variables when end of an quizz
     void renew() {
         xplace = null;
         yplace = null;

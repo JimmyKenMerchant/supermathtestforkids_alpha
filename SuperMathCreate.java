@@ -19,11 +19,11 @@ class SuperMathCreate {
     static int ranmal = 26; //to overide crossover classes, need to invoke static.
     static int randivi = 20; //to overide crossover classes, need to invoke static.
     static int randiviqu = 15; //to overide crossover classes, need to invoke static.
-    private BigDecimal decix = new BigDecimal(0);
-    private BigDecimal deciy = new BigDecimal(0);
-    private BigDecimal deciz = new BigDecimal(0);
-    private BigDecimal decia = new BigDecimal(0);
-    private BigDecimal decib = new BigDecimal(0);    
+    private BigDecimal decix;
+    private BigDecimal deciy;
+    private BigDecimal deciz;
+    private BigDecimal decia;
+    private BigDecimal decib;    
     String createx = null;
     String createy = null;
     String createz = null;

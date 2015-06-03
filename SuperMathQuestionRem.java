@@ -8,7 +8,7 @@ import java.awt.Color;
  * Copyright 2015 KENTA ISHII All Rights Reserved
  * 
  */
-class SuperMathQuestionRem extends javax.swing.JFrame {   
+class SuperMathQuestionRem extends javax.swing.JFrame { 
     String xplace = null;
     String yplace = null;
     String oper = null;
@@ -30,8 +30,6 @@ class SuperMathQuestionRem extends javax.swing.JFrame {
     Color cole = new Color(150, 0, 150);
     Color colf = new Color(255, 200, 255);    
     
-    
-
     SuperMathQuestionRem() {
         initComponents();
     }
@@ -68,6 +66,11 @@ class SuperMathQuestionRem extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 255, 0));
@@ -108,6 +111,11 @@ class SuperMathQuestionRem extends javax.swing.JFrame {
         jTextField2.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField2KeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -205,22 +213,9 @@ class SuperMathQuestionRem extends javax.swing.JFrame {
             if(chek){
                 boolean ch = true;
                 boolean err = true;
-                try{
+                
                 panswer = jTextField1.getText();
                 panswerre = jTextField2.getText();
-                }catch (NullPointerException e){
-                    jTextField1.setText(null);
-                    jTextField2.setText(null);                      
-                    SuperMathTest.popup.setVisible(true);
-                    SuperMathTest.popup.jLabel1.setText("Error!");
-                    panswer = "?";
-                    panswerre = " ?";                   
-                    err = false;
-                    SuperMathTest.erco++;
-                    if(SuperMathTest.erco > 19){
-                        System.exit(0);
-                    }                                                          
-                }
                 
                 // check whether this answer is too long or not
                 int a = panswer.length();
@@ -240,7 +235,7 @@ class SuperMathQuestionRem extends javax.swing.JFrame {
                     SuperMathTest.popup.setVisible(true);
                     SuperMathTest.popup.jLabel1.setText("Enter Some Number!");
                     panswer = "?";
-                    panswerre = " ?";                   
+                    panswerre = "?";                   
                     err = false;
                     SuperMathTest.erco++;
                     if(SuperMathTest.erco > 19){
@@ -293,7 +288,7 @@ class SuperMathQuestionRem extends javax.swing.JFrame {
         }                
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    //Go to next question
+    // Go to next question
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         boolean err = true;        
         if(err){
@@ -318,20 +313,57 @@ class SuperMathQuestionRem extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    // Delete exceeded characters in the field
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        int limit = 30;
+        if(SuperMathTest.tp < 500){
+            javax.swing.JTextField a = (javax.swing.JTextField)evt.getSource();
+            String ent = a.getText();
+            if(ent.length() >= limit){
+               ent = ent.substring(0, limit);
+            jTextField1.setText(ent);        
+            }
+            SuperMathTest.tp++;
+        }else{
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jTextField1KeyTyped
+
+    // Delete exceeded characters in the field
+    private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
+        final int limit = 30;
+        if(SuperMathTest.tp < 500){
+            javax.swing.JTextField a = (javax.swing.JTextField)evt.getSource();
+            String ent = a.getText();
+            if(ent.length() >= limit){
+               ent = ent.substring(0, limit);
+            jTextField2.setText(ent);        
+            }
+            SuperMathTest.tp++;
+        }else{
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jTextField2KeyTyped
+
+    // Renew variables when end of an quizz
     void renew() {
         xplace = null;
         yplace = null;
         oper = null;
         question = null;
         coanswer = null;
+        pcoanswer = null;
+        pcoanswerre = null;
         answer = null;
+        panswer = null;
+        panswerre = null;
         judge = "Pass";
         make = true;
         ansd = true;
         chek = true;
         jLabel2.setText(null);        
-        jTextField1.setText(null);
-        jTextField2.setText(null);        
+        jTextField1.setText(null);        
+        jTextField2.setText(null);          
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

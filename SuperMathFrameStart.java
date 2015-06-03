@@ -7,7 +7,7 @@ package jimmykenmerchant.mathforkids_alpha;
  * 
  */
 class SuperMathFrameStart extends javax.swing.JFrame {
-    String testname = null;
+    String testname = null;  
 
     SuperMathFrameStart() {
         initComponents();
@@ -63,6 +63,11 @@ class SuperMathFrameStart extends javax.swing.JFrame {
         jSeparator2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         jTextField1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 255, 0));
@@ -135,22 +140,9 @@ class SuperMathFrameStart extends javax.swing.JFrame {
   
     // Start test and get nickname
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        boolean errchek = true;
+        boolean err = true;
         
-        // this error catcher can be needed for
-        try{
-            testname = jTextField1.getText();
-        }catch(NullPointerException e){
-            jTextField1.setText(null);
-            SuperMathTest.popup.setVisible(true);
-            SuperMathTest.popup.jLabel1.setText("Error!");
-            testname = null;
-            errchek = false;
-            SuperMathTest.erco++;
-            if(SuperMathTest.erco > 19){
-                System.exit(0);
-            }              
-        }
+        testname = jTextField1.getText();
         
         // check whether unique nickname is given or not
         int a = testname.length();
@@ -160,7 +152,7 @@ class SuperMathFrameStart extends javax.swing.JFrame {
             jTextField1.setText(null);
             SuperMathTest.popup.setVisible(true);
             SuperMathTest.popup.jLabel1.setText("Long to Input!");
-            errchek = false;
+            err = false;
             SuperMathTest.erco++;
             if(SuperMathTest.erco > 19){
                 System.exit(0);
@@ -168,7 +160,7 @@ class SuperMathFrameStart extends javax.swing.JFrame {
         }
         
         // open next menu if no error
-        if(errchek){
+        if(err){
             this.setVisible(false);
             SuperMathTest.testselect.setVisible(true);
         }   
@@ -176,8 +168,24 @@ class SuperMathFrameStart extends javax.swing.JFrame {
 
     //Exit this software
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    // Delete exceeded characters in the field
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        final int limit = 30;
+        if(SuperMathTest.tp < 500){
+            javax.swing.JTextField a = (javax.swing.JTextField)evt.getSource();
+            String ent = a.getText();
+            if(ent.length() >= limit){
+               ent = ent.substring(0, limit);
+            jTextField1.setText(ent);        
+            }
+            SuperMathTest.tp++;
+        }else{
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jTextField1KeyTyped
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

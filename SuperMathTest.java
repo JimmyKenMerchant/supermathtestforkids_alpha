@@ -10,6 +10,7 @@ import java.util.Random;
  */
 class SuperMathTest {
     static Random ran = new Random();
+    static int tp = 0;// how much kids have typed to deremine to close this application
     static int co = 0;// how much kids have quizzes
     static int bad = 0;// how much kids have warong answers
     static int type = 0;// quizzes' type
@@ -89,15 +90,11 @@ class SuperMathTest {
     
     // Restart test
     static void restart() {
+        tp = 0; // because of satic variables which can't renew
         co = 0; // because of satic variables which can't renew
         bad = 0; // because of satic variables which can't renew
         type = 0; // because of satic variables which can't renew
         rand = false;
-
-        create.ranadsub = 26; //because of satic variables which can't renew
-        create.ranmal = 26; //because of satic variables which can't renew
-        create.randivi = 20; //because of satic variables which can't renew
-        create.randiviqu = 15; //because of satic variables which can't renew
 
         teststar.setVisible(true);
         testselect.setVisible(false);
