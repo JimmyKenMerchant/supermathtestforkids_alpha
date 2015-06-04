@@ -280,16 +280,26 @@ class SuperMathQuestion extends javax.swing.JFrame {
                 if(ansd && chek){
                     SuperMathTest.bad++;
                 }
+                
+                // get this munu's location to use the method below
+                SuperMathTest.xypo = SuperMathTest.quest1.getLocation();                
+                
                 renew();
                 this.setVisible(false);                
                 SuperMathTest.repeat();
-                
             }else{
                 if(ansd && chek){
                     SuperMathTest.bad++;
                 }
                 renew();
-                this.setVisible(false);                
+                this.setVisible(false);
+                
+                // set next menu's location    
+                SuperMathTest.xypo = SuperMathTest.quest1.getLocation();
+                int x = SuperMathTest.xypo.x;
+                int y = SuperMathTest.xypo.y;
+                SuperMathTest.testresul.setLocation(x, y); 
+        
                 SuperMathTest.testresul.setVisible(true);
                 SuperMathTest.testresul.jButton3.doClick();
                 SuperMathTest.testresul.jButton1.requestFocusInWindow(); //focous

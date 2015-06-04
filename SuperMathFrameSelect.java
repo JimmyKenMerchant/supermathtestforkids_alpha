@@ -134,36 +134,71 @@ class SuperMathFrameSelect extends javax.swing.JFrame {
 
     // Start addition
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      this.setVisible(false);
-      SuperMathTest.type = 1; //Test Type
-      SuperMathTest.quest1.setVisible(true);
-      SuperMathTest.quest1.jButton1.doClick();//Auto Click same as Start
+        this.setVisible(false);
+        SuperMathTest.type = 1; //Test Type
+        
+        // set next menu's location
+        SuperMathTest.xypo = SuperMathTest.testselect.getLocation();
+        int x = SuperMathTest.xypo.x;
+        int y = SuperMathTest.xypo.y;
+        SuperMathTest.quest1.setLocation(x, y);
+        
+        SuperMathTest.quest1.setVisible(true);
+        SuperMathTest.quest1.jButton1.doClick();//Auto Click same as Start
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Start subtraction
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      this.setVisible(false);
-      SuperMathTest.type = 2; //Test Type
-      SuperMathTest.quest1.setVisible(true);
-      SuperMathTest.quest1.jButton1.doClick();//Auto Click same as Start      
+        this.setVisible(false);
+        SuperMathTest.type = 2; //Test Type
+      
+        // set next menu's location
+        SuperMathTest.xypo = SuperMathTest.testselect.getLocation();
+        int x = SuperMathTest.xypo.x;
+        int y = SuperMathTest.xypo.y;
+        SuperMathTest.quest1.setLocation(x, y);
+        
+        SuperMathTest.quest1.setVisible(true);
+        SuperMathTest.quest1.jButton1.doClick();//Auto Click same as Start      
     }//GEN-LAST:event_jButton2ActionPerformed
 
     // Start maltiplication
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-      this.setVisible(false);
-      SuperMathTest.type = 3; //Test Type
-      SuperMathTest.quest1.setVisible(true);
-      SuperMathTest.quest1.jButton1.doClick();//Auto Click same as Start 
+        this.setVisible(false);
+        SuperMathTest.type = 3; //Test Type
+        
+        // set next menu's location
+        SuperMathTest.xypo = SuperMathTest.testselect.getLocation();
+        int x = SuperMathTest.xypo.x;
+        int y = SuperMathTest.xypo.y;
+        SuperMathTest.quest1.setLocation(x, y);
+        
+        SuperMathTest.quest1.setVisible(true);
+        SuperMathTest.quest1.jButton1.doClick();//Auto Click same as Start 
     }//GEN-LAST:event_jButton3ActionPerformed
 
     // Start division
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      this.setVisible(false);
-      SuperMathTest.type = 4; //Test Type
+        this.setVisible(false);
+        SuperMathTest.type = 4; //Test Type
             if(SuperMathTest.testcondition.level == 1 || SuperMathTest.testcondition.level == 3){
+                
+                // set next menu's location
+                SuperMathTest.xypo = SuperMathTest.testselect.getLocation();
+                int x = SuperMathTest.xypo.x;
+                int y = SuperMathTest.xypo.y;
+                SuperMathTest.quest1.setLocation(x, y);                
+                
                 SuperMathTest.quest1.setVisible(true);
                 SuperMathTest.quest1.jButton1.doClick();//Auto Click
             }else if(SuperMathTest.testcondition.level == 2){
+                
+                // set next menu's location
+                SuperMathTest.xypo = SuperMathTest.testselect.getLocation();
+                int x = SuperMathTest.xypo.x;
+                int y = SuperMathTest.xypo.y;
+                SuperMathTest.quest2.setLocation(x, y);                  
+                
                 SuperMathTest.quest2.setVisible(true);
                 SuperMathTest.quest2.jButton1.doClick();//Auto Click               
             }     
@@ -171,16 +206,27 @@ class SuperMathFrameSelect extends javax.swing.JFrame {
 
     // Start mixtest
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-      this.setVisible(false);
-      SuperMathTest.rand = true;     
-      SuperMathTest.mixtest();
+        this.setVisible(false);
+        
+        // get this munu's location to use the method below
+        SuperMathTest.xypo = SuperMathTest.testselect.getLocation(); 
+        
+        SuperMathTest.rand = true;     
+        SuperMathTest.mixtest();
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    // Change status
+    // Go to level-status menu
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-    this.setVisible(false);
-    SuperMathTest.testcondition.setVisible(true);
-    SuperMathTest.testcondition.jButton5.doClick();
+        this.setVisible(false);
+
+        // set next menu's location    
+        SuperMathTest.xypo = SuperMathTest.testselect.getLocation();
+        int x = SuperMathTest.xypo.x;
+        int y = SuperMathTest.xypo.y;
+        SuperMathTest.testcondition.setLocation(x, y); 
+
+        SuperMathTest.testcondition.setVisible(true);
+        SuperMathTest.testcondition.jButton5.doClick();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -156,6 +156,13 @@ class SuperMathFrameCondition extends javax.swing.JFrame {
     // Back the menu before
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.setVisible(false);
+        
+        // set next menu's location    
+        SuperMathTest.xypo = SuperMathTest.testcondition.getLocation();
+        int x = SuperMathTest.xypo.x;
+        int y = SuperMathTest.xypo.y;
+        SuperMathTest.testselect.setLocation(x, y);
+        
         SuperMathTest.testselect.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 

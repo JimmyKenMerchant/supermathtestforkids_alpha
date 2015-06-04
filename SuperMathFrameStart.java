@@ -162,6 +162,13 @@ class SuperMathFrameStart extends javax.swing.JFrame {
         // open next menu if no error
         if(err){
             this.setVisible(false);
+            
+            // set next menu's location            
+            SuperMathTest.xypo = SuperMathTest.teststar.getLocation();
+            int x = SuperMathTest.xypo.x;
+            int y = SuperMathTest.xypo.y;
+            SuperMathTest.testselect.setLocation(x, y);
+            
             SuperMathTest.testselect.setVisible(true);
         }   
     }//GEN-LAST:event_jButton1ActionPerformed

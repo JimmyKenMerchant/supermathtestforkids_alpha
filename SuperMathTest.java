@@ -1,5 +1,6 @@
 package jimmykenmerchant.mathforkids_alpha;
 
+import java.awt.Point;
 import java.util.Random;
 
 /**
@@ -25,6 +26,8 @@ class SuperMathTest {
     static SuperMathQuestionRem quest2 = new SuperMathQuestionRem(); 
     static SuperMathFrameResult testresul = new SuperMathFrameResult();
     static Popup popup = new Popup();
+    static Point xypo;
+    
 
     // Main to start
     public static void main(String[] args) {    
@@ -38,11 +41,21 @@ class SuperMathTest {
     }
     
     static void toquest1() {
+        // set next menu's location  
+        int x = SuperMathTest.xypo.x;
+        int y = SuperMathTest.xypo.y;
+        quest1.setLocation(x, y);
+        
         quest1.setVisible(true);
         quest1.jButton1.doClick();//Auto Click
     }
     
     static void toquest2() {
+        // set next menu's location  
+        int x = SuperMathTest.xypo.x;
+        int y = SuperMathTest.xypo.y;
+        quest2.setLocation(x, y);        
+        
         quest2.setVisible(true);  
         quest2.jButton1.doClick();//Auto Click         
     }
@@ -95,12 +108,18 @@ class SuperMathTest {
         bad = 0; // because of satic variables which can't renew
         type = 0; // because of satic variables which can't renew
         rand = false;
-
+        
+        // set next menu's location    
+        xypo = testresul.getLocation();
+        int x = xypo.x;
+        int y = xypo.y;
+        teststar.setLocation(x, y);
+        
         teststar.setVisible(true);
         testselect.setVisible(false);
         testcondition.setVisible(false);
         quest1.setVisible(false);
         quest2.setVisible(false);
         testresul.setVisible(false);
-    }    
+    }
 }

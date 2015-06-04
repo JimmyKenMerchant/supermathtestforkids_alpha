@@ -296,6 +296,10 @@ class SuperMathQuestionRem extends javax.swing.JFrame {
                 if(ansd && chek){
                     SuperMathTest.bad++;
                 }
+                
+                // get this munu's location to use the method below
+                SuperMathTest.xypo = SuperMathTest.quest2.getLocation();
+                
                 renew();
                 this.setVisible(false);                
                 SuperMathTest.repeat();
@@ -305,7 +309,14 @@ class SuperMathQuestionRem extends javax.swing.JFrame {
                     SuperMathTest.bad++;
                 }
                 renew();
-                this.setVisible(false);                
+                this.setVisible(false);
+                
+                // set next menu's location    
+                SuperMathTest.xypo = SuperMathTest.quest2.getLocation();
+                int x = SuperMathTest.xypo.x;
+                int y = SuperMathTest.xypo.y;
+                SuperMathTest.testresul.setLocation(x, y);
+                
                 SuperMathTest.testresul.setVisible(true);
                 SuperMathTest.testresul.jButton3.doClick();
                 SuperMathTest.testresul.jButton1.requestFocusInWindow(); //focous
