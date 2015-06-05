@@ -13,9 +13,11 @@ class SuperMathCheckRem {
     private String pcoanswer = null;
     private String panswer = null;
     private String pcoanswerre = null;
-    private String panswerre = null; 
-    private BigDecimal coan;
-    private BigDecimal an;
+    private String panswerre = null;
+    BigDecimal pcoan;
+    BigDecimal pcoanre;
+    BigDecimal pan;
+    BigDecimal panre;
     
     SuperMathCheckRem(String pcoanswer, String pcoanswerre, String panswer, String panswerre) {
        this.pcoanswer = pcoanswer;
@@ -26,10 +28,10 @@ class SuperMathCheckRem {
 
     // Check the answer and return boolean in the question of division with remainders
     boolean checker() throws Exception {
-        BigDecimal pcoan = new BigDecimal(pcoanswer);
-        BigDecimal pcoanre = new BigDecimal(pcoanswerre);
-        BigDecimal pan = new BigDecimal(panswer);
-        BigDecimal panre = new BigDecimal(panswerre);
+        pcoan = new BigDecimal(pcoanswer);
+        pcoanre = new BigDecimal(pcoanswerre);
+        pan = new BigDecimal(panswer);
+        panre = new BigDecimal(panswerre);
         if(pcoan.compareTo(pan) == 0 && pcoanre.compareTo(panre) ==0){
             return true;
         }else{

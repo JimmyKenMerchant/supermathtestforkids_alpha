@@ -22,8 +22,8 @@ class SuperMathCheck {
     
     // Check the answer and return boolean
     boolean checker() throws Exception {
-        BigDecimal coan = new BigDecimal(coanswer);
-        BigDecimal an = new BigDecimal(answer);
+        coan = new BigDecimal(coanswer);
+        an = new BigDecimal(answer);
         if(coan.compareTo(an) == 0){
             return true;
         }else{

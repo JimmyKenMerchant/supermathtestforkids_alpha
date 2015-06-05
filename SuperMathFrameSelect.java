@@ -181,27 +181,27 @@ class SuperMathFrameSelect extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.setVisible(false);
         SuperMathTest.type = 4; //Test Type
-            if(SuperMathTest.testcondition.level == 1 || SuperMathTest.testcondition.level == 3){
-                
-                // set next menu's location
-                SuperMathTest.xypo = SuperMathTest.testselect.getLocation();
-                int x = SuperMathTest.xypo.x;
-                int y = SuperMathTest.xypo.y;
-                SuperMathTest.quest1.setLocation(x, y);                
-                
-                SuperMathTest.quest1.setVisible(true);
-                SuperMathTest.quest1.jButton1.doClick();//Auto Click
-            }else if(SuperMathTest.testcondition.level == 2){
-                
-                // set next menu's location
-                SuperMathTest.xypo = SuperMathTest.testselect.getLocation();
-                int x = SuperMathTest.xypo.x;
-                int y = SuperMathTest.xypo.y;
-                SuperMathTest.quest2.setLocation(x, y);                  
-                
-                SuperMathTest.quest2.setVisible(true);
-                SuperMathTest.quest2.jButton1.doClick();//Auto Click               
-            }     
+        if(SuperMathTest.testcondition.level == 1 || SuperMathTest.testcondition.level == 3){
+
+            // set next menu's location
+            SuperMathTest.xypo = SuperMathTest.testselect.getLocation();
+            int x = SuperMathTest.xypo.x;
+            int y = SuperMathTest.xypo.y;
+            SuperMathTest.quest1.setLocation(x, y);                
+
+            SuperMathTest.quest1.setVisible(true);
+            SuperMathTest.quest1.jButton1.doClick();//Auto Click
+        }else if(SuperMathTest.testcondition.level == 2){
+
+            // set next menu's location
+            SuperMathTest.xypo = SuperMathTest.testselect.getLocation();
+            int x = SuperMathTest.xypo.x;
+            int y = SuperMathTest.xypo.y;
+            SuperMathTest.quest2.setLocation(x, y);                  
+
+            SuperMathTest.quest2.setVisible(true);
+            SuperMathTest.quest2.jButton1.doClick();//Auto Click               
+        }     
     }//GEN-LAST:event_jButton4ActionPerformed
 
     // Start mixtest
