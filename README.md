@@ -22,7 +22,7 @@ English using UTF-8
 
 ##6: INTERFACE FONT:
 
-SansSerif
+Sans-Serif
 
 ##7: DISCREPTION
 
@@ -48,13 +48,13 @@ I. Download the latest version of this software (JAR file) from [the download pa
 
 II. Start this software, and enter your nickname. Then click "Get Tested" button.
 
-![mtcp1.PNG](https://bitbucket.org/repo/MA4E8y/images/3639820123-mtcp1.PNG)
+![mtcp1.PNG](http://www.jimmykenmerchant.com/imgopensource/mtcp1.PNG)
 
 III. Select one of test types, and start quizzes by clicking each button. You can change quizzes' difficulties by clicking "Level Settings" button.
 
 IV. Answer 10 quizzes by enter numbers using your ten key pad, and click "Answer" button. Also you can pass quizzes by clicking "Pass" button. If you miss the answer, you can see the correct answer by clicking "Why?" button.
 
-![mtcp2.PNG](https://bitbucket.org/repo/MA4E8y/images/2423468839-mtcp2.PNG)
+![mtcp2.PNG](http://www.jimmykenmerchant.com/imgopensource/mtcp2.PNG)
 
 V. To next question, click "Next" button. To show the result, click "End" button on the 10th quiz after answering.
 
@@ -100,23 +100,26 @@ THAT IS "FREE TO USE IN NO COMMERCIAL SITUATION".
 KENTA ISHII HAS EXEMPTION FROM RESPOSIBILITY OF ANY USER'S DAMAGE, AND ANY PROPERTY'S DAMAGE FROM USING THIS SOFTWARE, AND EXEMPTION FROM ANY DAMAGE CLAIM.
 THIS SOFTWARE HAS NO WARRANTY FOR ABILITIES OF CHILDREN BY USING THIS SOFTWARE.
 
-##10: APPLICABLE LAW
+##10: APPLICABLE LAWS
 
-The Civil Code of Japan, the Copyright Law of Japan, and other related law apply to Kenta Ishii, user, and developer. Kenta Ishii, user, and developer must comply with applicable law.
-If user and developer are living in other nations and regions from Japan, user and developer must comply with applicable law of the nations and regions where user and developer live IN ADDITION TO JAPANESE APPLICABLE LAW.
+The Civil Code of Japan, the Copyright Law of Japan, and other related laws apply to Kenta Ishii, user, and developer. Kenta Ishii, user, and developer must comply with applicable laws.
+If user and developer are living in other nations and regions from Japan, user and developer must comply with applicable laws of the nations and regions where user and developer live IN ADDITION TO JAPANESE APPLICABLE LAWS.
 
-##11: TERMS OF USE
+##11: LIMITATION
 
 User and Developer can not use this software without complying all ariticles of this README.
+There is no regulations to name variables, even camelcase. I think it's very healthy. Thank you.
 
 ##12: HISTORY
 
+10/02/2015 -- Released duplicately on GitHub.
+
 06/03/2015 -- Tagged Version1.1 as of the date, which is added Restart button and improved an issue about RAM.
 
-06/02/2015 -- Re-release this software on Bitbucket and Re-tagged Version1.0 as of the date
+06/02/2015 -- Re-released this software on Bitbucket and Re-tagged Version1.0 as of the date.
 
-05/25/2015 -- First tagged Version1.0 as of the date
+05/25/2015 -- First tagged Version1.0 as of the date.
 
-05/24/2015 -- Re-release this software on Bitbucket
+05/24/2015 -- Re-released this software on Bitbucket.
 
-05/22/2015 -- Initial release this software on Bitbucket
+05/22/2015 -- Initial released this software on Bitbucket.
